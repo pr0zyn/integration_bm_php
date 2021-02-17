@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+
+class FormType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        define('PRICE', 1000);
+        $builder
+            ->add('price',IntegerType::class, array('data' => PRICE, 'disabled' => true) )
+            ->add('BUY', SubmitType::class)
+        ;
+    }
+
+
+}
