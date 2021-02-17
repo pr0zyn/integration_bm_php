@@ -4,8 +4,8 @@ namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 class FormType extends AbstractType
 {
@@ -13,8 +13,8 @@ class FormType extends AbstractType
     {
         define('PRICE', 1000);
         $builder
-            ->add('price',IntegerType::class, array('data' => PRICE, 'disabled' => true) )
-            ->add('BUY', SubmitType::class)
+            ->add('price',MoneyType::class, array('data' => PRICE, 'currency' => 'PLN', 'attr' =>['readonly' => true]) )
+            ->add('Buy', SubmitType::class)
         ;
     }
 
