@@ -14,7 +14,7 @@ class BlueMediaController extends AbstractController
       $price = $data;
 
       $dotenv = new Dotenv();
-      $dotenv->load($_SERVER['PWD'].'/.env.dev.local');
+      $dotenv->load($_SERVER['PWD'].'/.env.example');
 
    
 
