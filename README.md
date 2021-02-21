@@ -14,7 +14,7 @@ For correct working you shoud register on admin Blue Media page and get your own
 ## Status
 Project is: _in progress
 
-TO DO:
+## TO DO:
 * checking payment status
 * environment variables for secrets
 * a lot of important security things
